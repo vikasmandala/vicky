@@ -1,0 +1,33 @@
+pipeline {
+    agent any
+    
+    stages {
+        stage('Build') {
+            steps {
+                // Build the artifact
+                sh 'mvn clean package'
+            }
+        }
+        
+        stage('Test') {
+            steps {
+                // Run test cases
+                sh 'mvn test'
+            }
+        }
+        
+        stage('Code Quality') {
+            steps {
+                // Check code quality using a shell script
+                sh './code_quality_script.sh'
+            }
+        }
+        
+        stage('Deploy') {
+            steps {
+                // Deploy the artifact to another server
+                sh 'scp target/my-app.jar user@another-server:/path/to/deployment/'
+            }
+        }
+    }
+}
