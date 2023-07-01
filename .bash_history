@@ -40,3 +40,49 @@ cd /usr/lib/jvm
 ls
 ls -l /usr/bin/java
 readlink -f /usr/bin/java
+clear
+git config --global user.name "vikasmandala"
+git config --global user.email "vikasmandala100@gmail.com"
+git config --list
+touch new_file.txt
+git add new_file.txt
+git commit -m "Add new_file.txt"
+git push origin master
+git remote -v
+git remote add origin https://github.com/vikasmandala/vicky.git
+git remote -v
+git push origin master
+vi ~/.config/git/config
+vi ~/.gitconfig
+clear
+git pull origin master
+git config pull.rebase false
+git pull origin master
+git config pull.rebase true
+git pull origin master
+git config pull.ff only
+git pull origin master
+git add .
+git pull origin master --allow-unrelated-histories
+git add .
+git commit -m "Commit message"
+git pull origin master --allow-unrelated-histories
+git stash
+git stash apply
+git pull origin master --allow-unrelated-histories
+git status
+git reset --hard origin/master
+git pull origin master
+git push origin master
+touch Projectk
+git add .
+git rev-parse --git-dir
+git rm --cached PassParametersRunTimeViaMVN
+git rm --cached simple-maven-project-with-tests
+git rm --cached workspace/Declarative-Pipeline
+git restore --staged PassParametersRunTimeViaMVN
+git restore --staged simple-maven-project-with-tests
+git restore --staged workspace/Declarative-Pipeline
+git rm --cached -f PassParametersRunTimeViaMVN
+git rm --cached -f simple-maven-project-with-tests
+git rm --cached -f workspace/Declarative-Pipeline
